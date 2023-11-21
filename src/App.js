@@ -15,6 +15,7 @@ function App() {
               <Home />
             </>
           }></Route>
+          
           <Route exact path='/cart' element={
             <>
               <Header />
