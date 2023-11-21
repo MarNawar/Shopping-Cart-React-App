@@ -54,7 +54,7 @@ function CartItem() {
                       }
                       }
                     >
-                      {[...Array(prod.instock).keys()].map((x)=>(
+                      {[...Array(prod.instock)].map((_,x)=>(
                         <option key={x+1}>{x+1}</option>
                       ))}
                     </Form.Control>

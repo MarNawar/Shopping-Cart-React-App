@@ -44,7 +44,7 @@ const Filters = () => {
               payload: 'highToLow',
             })
           }
-          checked = {sort === 'highToLow'? true: false}
+          checked = {sort === 'highToLow'}
         />
       </span>
       <span>

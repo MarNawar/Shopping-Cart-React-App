@@ -38,7 +38,6 @@ function SingleProduct({prod}) {
                   type:'ADD_TO_CART',
                   payload: prod,
                 });
-                // console.log(cart);
               }}>
                 Add to Cart
               </Button>
