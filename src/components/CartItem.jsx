@@ -12,7 +12,9 @@ import { AiFillDelete } from 'react-icons/ai';
 
 function CartItem() {
   const [total, setTotal] = useState()
+
   const { state: { cart }, dispatch } = useContext(Cart);
+  
   useEffect(() => {
     setTotal(cart.reduce((acc, curr) => acc += parseInt(curr.price) * (curr.qty), 0))
   }, [cart])

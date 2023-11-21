@@ -7,7 +7,7 @@ export const Cart = createContext();
 
 faker.seed(99);
 function Context({ children }) {
-  
+
   const products = [...Array(21)].map(() => ({
     id: faker.string.uuid(),
     name: faker.commerce.productName(),
@@ -16,7 +16,6 @@ function Context({ children }) {
     instock: faker.helpers.arrayElement([0, 3, 5, 6, 7]),
     fastDelivery: faker.datatype.boolean(),
     rating: faker.helpers.arrayElement([1, 2, 3, 4, 5]),
-
   }))
 
   const [state, dispatch] = useReducer(cartReducer, {
