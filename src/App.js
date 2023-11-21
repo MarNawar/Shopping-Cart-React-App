@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import {BrowserRouter as Router, Route ,Routes} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './components/Home';
 import CartItem from './components/CartItem';
 function App() {
@@ -9,19 +9,19 @@ function App() {
       <div className="app">
         {/* <Header/> */}
         <Routes>
-          <Route exact path ='/' element={
+          <Route exact path='/' element={
             <>
-              <Header/>
+              <Header />
               <Home />
             </>
           }></Route>
-          <Route exact path ='/cart' element={
+          <Route exact path='/cart' element={
             <>
-              <Header/>
+              <Header />
               <CartItem />
             </>
           }></Route>
-          </Routes>
+        </Routes>
       </div>
     </Router>
   );

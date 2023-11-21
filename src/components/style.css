@@ -30,44 +30,44 @@
 
 /*home page*/
 
-.home{
+.home {
   display: flex;
 }
 
-.productContainer{
-  display:flex;
-  width:78%;
-  padding:20px;
-  flex-wrap:wrap;
-  justify-content:space-around;
+.productContainer {
+  display: flex;
+  width: 78%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.filters{
+.filters {
   background-color: #343a40;
   color: white;
   padding: 20px;
   display: flex;
   flex-direction: column;
   width: 20%;
-  margin:10px;
+  margin: 10px;
   height: 86vh;
 }
 
-.filters > span{
+.filters>span {
   padding-bottom: 20px;
 }
 
-.title{
+.title {
   font-size: 30px;
 }
 
-.products{
+.products {
   width: 30%;
   margin: 10px;
 }
 
-.summary{
-  width:30%;
+.summary {
+  width: 30%;
 }
 
 @media (max-width: 771px) {
@@ -77,7 +77,7 @@
     margin: 5px;
   }
 
-  .filters > span {
+  .filters>span {
     font-size: 10px;
   }
 

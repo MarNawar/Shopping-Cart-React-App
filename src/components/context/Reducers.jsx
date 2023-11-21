@@ -1,48 +1,48 @@
-export const cartReducer = (state,action)=>{
-  switch(action.type){
+export const cartReducer = (state, action) => {
+  switch (action.type) {
     case 'ADD_TO_CART':
       return {
         ...state,
-        cart:[...state.cart,{...action.payload,qty:1}]
+        cart: [...state.cart, { ...action.payload, qty: 1 }]
       }
     case 'REMOVE_FROM_CART':
-      return{
+      return {
         ...state,
-        cart:state.cart.filter((item)=>{
-          return item.id!==action.payload.id
+        cart: state.cart.filter((item) => {
+          return item.id !== action.payload.id
         })
       }
     case 'CHANGE_CART_QTY':
       return {
         ...state,
-        cart: state.cart.map(c=>c.id===action.payload.id?({...c,qty:Number(action.payload.qty)}): c),
+        cart: state.cart.map(c => c.id === action.payload.id ? ({ ...c, qty: Number(action.payload.qty) }) : c),
       }
     default:
       return state;
   }
 }
 
-export const productReducer = (state,action)=>{
-  switch(action.type){
+export const productReducer = (state, action) => {
+  switch (action.type) {
     case 'SORT_BY_PRICE':
       return {
         ...state,
         sort: action.payload
       };
     case 'FILTER_BY_STOCK':
-      return{
+      return {
         ...state,
-        byStock:!state.byStock
+        byStock: !state.byStock
       }
     case 'FILTER_BY_DELIVERY':
       return {
         ...state,
-        byFastDelivery : !state.byFastDelivery
+        byFastDelivery: !state.byFastDelivery
       }
     case 'FILTER_BY_RATING':
       return {
         ...state,
-        byRating:action.payload
+        byRating: action.payload
       }
     case 'FILTER_BY_SEARCH':
       return {
@@ -51,10 +51,10 @@ export const productReducer = (state,action)=>{
       }
     case 'CLEAR_FILTERS':
       return {
-        byStock:false,
-        byFastDelivery:false,
-        byRating:0,
-        searchQuery:"",
+        byStock: false,
+        byFastDelivery: false,
+        byRating: 0,
+        searchQuery: "",
       }
     default:
       return state;
