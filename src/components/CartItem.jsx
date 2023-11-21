@@ -43,14 +43,15 @@ function CartItem() {
                     <Form.Control 
                       as='select' 
                       value={prod.qty}
-                      onChange={(e)=>
+                      onChange={(e)=>{
                         dispatch({
                           type:'CHANGE_CART_QTY',
                           payload:{
                             id:prod.id,
                             qty:e.target.value,
                           }
-                        })
+                        });
+                      }
                       }
                     >
                       {[...Array(prod.instock).keys()].map((x)=>(

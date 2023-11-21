@@ -7,15 +7,17 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header/>
+        {/* <Header/> */}
         <Routes>
           <Route exact path ='/' element={
             <>
+              <Header/>
               <Home />
             </>
           }></Route>
           <Route exact path ='/cart' element={
             <>
+              <Header/>
               <CartItem />
             </>
           }></Route>
